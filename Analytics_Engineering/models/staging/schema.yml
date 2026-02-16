@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_yellow_tripdata
+    columns:
+      - name: payment_type
+        description: >
+          Standardized payment method code.
+        data_tests:
+          - accepted_values:
+              values: [1, 2, 3, 4, 5]
+              # Note: If a '6' appears in the data, dbt test will fail here.
